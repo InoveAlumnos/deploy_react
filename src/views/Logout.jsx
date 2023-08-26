@@ -13,7 +13,7 @@ const Logout = () => {
     sessionStorage.removeItem("userName");
     setAuth(false);
     setUserName("");
-    navigate("/login");
+    navigate(process.env.PUBLIC_URL + "/login");
   }
 
   useEffect(() => {

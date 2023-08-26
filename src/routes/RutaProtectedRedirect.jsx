@@ -10,7 +10,7 @@ const RutaProtectedRedirect = () => {
         // Se agrega en la URL el destino deseado
         // luego del login --> ?next=<url>
         // en los query parameters de la URL
-        return <Navigate to={`/login?next=${location.pathname}`} replace />
+        return <Navigate to={`${process.env.PUBLIC_URL}/login?next=${location.pathname}`} replace />
     }
 
     // Usuario logeado, se renderiza la vista

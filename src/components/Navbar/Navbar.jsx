@@ -26,19 +26,19 @@ const Navbar = (props) => {
     return (
         <header className={styles.navbar}>
             <div className={styles.logoContainer}>
-                <NavLink key={1} to="/"><img className={styles.logo} alt="" src={marvelLogo}></img></NavLink>
+                <NavLink key={1} to={process.env.PUBLIC_URL + "/"}><img className={styles.logo} alt="" src={marvelLogo}></img></NavLink>
             </div>
             <div className={styles.buttonContainer}>
-                <NavLink to="/"><img className={styles.home} alt="" src={home}></img></NavLink>
+                <NavLink to={process.env.PUBLIC_URL + "/"}><img className={styles.home} alt="" src={home}></img></NavLink>
                 {auth === true? 
                     <>
-                        <NavLink key={3} to="/posteos"><img className={styles.posteos} alt="" src={posteos}></img></NavLink>
-                        <NavLink key={4} to="/perfil"><img className={styles.user} alt="" src={user}></img></NavLink>
-                        <NavLink key={5} to="/logout"><img className={styles.logout} alt="" src={logout}></img></NavLink>
+                        <NavLink key={3} to={process.env.PUBLIC_URL + "/posteos"}><img className={styles.posteos} alt="" src={posteos}></img></NavLink>
+                        <NavLink key={4} to={process.env.PUBLIC_URL + "/perfil"}><img className={styles.user} alt="" src={user}></img></NavLink>
+                        <NavLink key={5} to={process.env.PUBLIC_URL + "/logout"}><img className={styles.logout} alt="" src={logout}></img></NavLink>
                     </>
                     :
                     <>
-                        <NavLink key={2} to="/login"><img className={styles.login} alt="" src={login}></img></NavLink>
+                        <NavLink key={2} to={process.env.PUBLIC_URL + "/login"}><img className={styles.login} alt="" src={login}></img></NavLink>
                     </>
                 }
             </div>

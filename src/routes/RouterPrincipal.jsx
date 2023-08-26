@@ -31,11 +31,11 @@ const RouterPrincipal = () => {
           </div>
 
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/login' element={<LoginRedirect />} />
-            <Route path='/logout' element={<Logout />} />
+            <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
+            <Route path={process.env.PUBLIC_URL + "/login"} element={<LoginRedirect />} />
+            <Route path={process.env.PUBLIC_URL + "/logout"} element={<Logout />} />
 
-            <Route path='/' element={<RutaProtectedRedirect />}>
+            <Route path={process.env.PUBLIC_URL + "/"} element={<RutaProtectedRedirect />}>
               <Route path='posteos' element={<Posteos />} />
               <Route path='perfil' element={<Profile />} />
             </Route>

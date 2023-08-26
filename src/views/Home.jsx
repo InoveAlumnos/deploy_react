@@ -29,7 +29,7 @@ const Home = () => {
     const api = useAuthEndpoints? posteosAuthAPI : posteosAPI;
     api.post(userName, titulo, texto).then((response) => {
       setSubmitText(
-        <Link to="/posteos">Posteo realizado, haga click aquí para verlo</Link>
+        <Link to={process.env.PUBLIC_URL + "/posteos"}>Posteo realizado, haga click aquí para verlo</Link>
       )
     }).catch( error => {
       setSubmitText("No se pudo realizar el posteo")

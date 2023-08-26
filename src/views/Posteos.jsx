@@ -37,7 +37,7 @@ const Posteos = () => {
 
       // Si el error es de autenticación, realizar el logout
       if(error.response.status === 401 || error.response.status === 403) {
-        navigate("/logout");
+        navigate(process.env.PUBLIC_URL + "/logout");
       }
     });
   }, [userName]);

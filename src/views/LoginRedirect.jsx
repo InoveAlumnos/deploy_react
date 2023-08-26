@@ -60,7 +60,7 @@ const Login = () => {
 
       // Si el parámetro next está definido, se hace le redirect allí,
       // de lo contrario se hace el redirect a "home"
-      const redirectTo = next? next : "/"
+      const redirectTo = next? next : (process.env.PUBLIC_URL + "/")
       
       navigate(redirectTo);
       
